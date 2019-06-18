@@ -186,7 +186,7 @@ def com_github_grpc_grpc(**kwargs):
     sha256 = get_sha256(name, "ba8b08a697b66e14af35da07753583cf32ff3d14dcd768f91b1bbe2e6c07c349", kwargs)
     git_repository(
         name = "com_github_grpc_grpc",
-        urls = ["https://github.com/Taring/grpc.git"],
+        remote = ["https://github.com/Taring/grpc.git"],
         commit = "a67a94b8c3a782cb6476efe73a6659afa666fdfd",
     )
 
