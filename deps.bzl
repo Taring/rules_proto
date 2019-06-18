@@ -1,4 +1,5 @@
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+load("@bazel_tools//tools/build_defs/repo:git.bzl", "new_git_repository", "git_repository")
 
 # https://raw.githubusercontent.com/grpc/grpc/master/third_party/zlib.BUILD
 ZLIB_BUILD = """
@@ -183,12 +184,11 @@ def com_github_grpc_grpc(**kwargs):
     name = "com_github_grpc_grpc"
     ref = get_ref(name, "v1.20.1", kwargs)
     sha256 = get_sha256(name, "ba8b08a697b66e14af35da07753583cf32ff3d14dcd768f91b1bbe2e6c07c349", kwargs)
-    http_archive(
+    git_repository(
         name = "com_github_grpc_grpc",
         urls = ["https://github.com/Taring/grpc.git"],
-        sha256 = "a67a94b8c3a782cb6476efe73a6659afa666fdfd",
+        commit = "a67a94b8c3a782cb6476efe73a6659afa666fdfd",
     )
-    github_archive(name, "Taring", "grpc", ref, sha256)
 
 def io_bazel_rules_dotnet(**kwargs):
     name = "io_bazel_rules_dotnet"
