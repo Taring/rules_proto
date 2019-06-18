@@ -161,7 +161,7 @@ def boringssl(**kwargs):
         http_archive(
             name = "boringssl",
             # on the chromium-stable-with-bazel branch
-            url = "https://boringssl.googlesource.com/boringssl/+archive/dcd3e6e6ecddf059adb48fca45bc7346a108bdd9.tar.gz",
+            url = "https://github.com/Taring/rules_proto/blob/master/file/boringssl-afc30d43eef92979b05776ec0963c9cede5fb80f.tar.gz?raw=true",
         )
 
 def com_github_nanopb_nanopb(**kwargs):
